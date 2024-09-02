@@ -10,7 +10,7 @@ window.onload=()=>{
         let pass=document.getElementById('password').value
         if(un=='admin'&& pass=='123456'){
             // window.location.replace("/")//can't return
-            window.location.href="/"
+            window.location.href="/TKW/"
         }else{
             document.getElementById('warn').style.visibility='visible'
         }
@@ -21,7 +21,7 @@ window.onload=()=>{
             let pass=document.getElementById('password').value
             if(un=='admin'&& pass=='123456'){
                 // window.location.replace("/")//can't return
-                window.location.href="/"
+                window.location.href="/TWK/"
             }else{
                 document.getElementById('warn').style.visibility='visible'
             }
