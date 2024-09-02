@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --nav-height:6rem;
+    --tea:#d28339;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--tea);
+    padding: 1rem;
+    width: 100%;
+    height: var(--nav-height);
+}
+nav img{
+    padding: 1rem;
+}
+.smol{
+    width: 5rem;
+    height: auto;
+}
+nav a{
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: cadetblue;
+}
+main{
+    margin-top:var(--nav-height);
+}
+/* comp  */
+.text-center{
+    text-align: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col{
+    flex-direction: column;
+
+}
+.text-white{
+    color: white;
+}
+.color1{
+    color: #c58f5d;
+}
+.admin{
+    background-color: #2b5471;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+}
+/* serious showdown  */
+section{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #131418;
+}
+.sec1{
+    background: url('/media/coffee_rorozoa_3_04.jpg') right no-repeat;
+    background-size: cover;
+}
+.sec1 h1, .sec1 p{
+    padding: 1rem;
+}
+.btn{
+    padding: 1rem;
+    color: white;
+    border: #d28339 2px solid;
+    background-color: transparent;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: #c58f5d;
+    color: black;
+}
+.m-2{
+    margin-top: 2rem;
+}
+@media only screen and (min-width: 600px){
+    .sec1 div{
+        margin:5rem 2rem 0 0;
+        float: right;
+        width: 30rem;
+        text-align: right;
+    }
+    nav{
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 400px){
+    nav img{
+        src: url('/media/crown.webp');
+    }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <script src="../js/product.js"></script>
+    <title>Café Management</title>
+</head>
+<body>
+    <nav id="nav-top" class="border-b-gray center justify-between">
+        <div id="shortcut-burger" class="nav-wrap center flex-col">
+            <img src="/media//icons8-hamburger-menu-50.png" alt="">
+        </div>
+        <div class="nav-wrap h-full w-full end">
+            <p>Hello, Admin!</p>
+            <img id="user-icon" class="h-full" src="/media/icons8-user-30.png" alt="">
+            <ul class="drop-box none">
+                <a href="./login.html" class="w-full"><li class="center">Log out <img src="/media/icons8-logout-50.png" alt=""></li></a>
+            </ul>
+        </div>
+    </nav>
+    <aside id="nav" class="border-l-gray">
+        <div class="border-b-gray nav-height center">
+            <a href="/" class="center logo">
+                <img class="logo" src="/media/caverta-cafe.png" alt="">
+            </a>
+        </div>
+        <ul style="margin-top: 1rem;">
+            <li><a href="/" class="nav-link " ><img src="/media/icons8-dashboard-48.png" alt=""><p>Dashboard</p></a></li>
+            <li><a href="status.html" class="nav-link "><img src="/media/icons8-wallet-50.png" alt=""><p>Status</p></a></li>
+            <li><a href="product.html" class="nav-link active"><img src="/media/icons8-drink-50.png" alt=""><p>Products</p></a></li>
+            <li><a href="staff.html" class="nav-link"><img src="/media/icons8-group-48.png" alt=""><p>Staff</p></a></li>
+        </ul>
+        <a href="./login.html" class="logout-aside nav-link"><img src="/media/icons8-logout-50.png" alt=""><p>Log out</p></a>
+    </aside>
+    <aside id="shortcut-menu" class="border-l-gray none flex flex-col justify-between">
+        <ul style="margin-top: 1rem;">
+            <li><a href="/" class="nav-link " ><img src="/media/icons8-dashboard-48.png" alt=""><p>Dashboard</p></a></li>
+            <li><a href="status.html" class="nav-link "><img src="/media/icons8-wallet-50.png" alt=""><p>Status</p></a></li>
+            <li><a href="product.html" class="nav-link active"><img src="/media/icons8-drink-50.png" alt=""><p>Products</p></a></li>
+            <li><a href="staff.html" class="nav-link"><img src="/media/icons8-group-48.png" alt=""><p>Staff</p></a></li>
+        </ul>
+        <a href="/page/login.html" class="logout-aside nav-link"><img src="/media/icons8-logout-50.png" alt=""><p>Log out</p></a>
+    </aside>
+
+    <main class="product-page">
+        <img id="ontop" src="/media/icons8-up-50.png" alt="">
+        <div id="over" class="over none">
+            <div class="over-form center flex-col">
+                <form action="" class="flex flex-col w-full">
+                    <a href="#" id="close">X</a>
+                    <h1>Add a product</h1>
+                    <label for="name">Name</label>
+                    <input type="text" value="Lychee tea" id="name" autocomplete="off">
+                    <label for="category">Category</label>
+                    <input type="text" value="Tea" id="category">
+                    <label for="img">Image</label>
+                    <input type="text" value="/media/lychee.png" id="img">
+                    <label for="price">Price</label>
+                        <input type="number" id="price" value="9">
+                    <div class="center justify-between">
+                        <button type="button" id="add" class="submit-btn">Submit</button>
+                        <button type="button" id="cancel" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="over-edit-prod" class="center" style="display: none;"></div>
+
+        <div class="line"><h1>Menu list</h1></div>
+        <div>
+            <h3>Find by category</h3>
+            <div class="flex">
+                <select id="select" class="m-1 w-full">
+                    <option class="option" value="1" selected="selected">Coffee</option>
+                    <option class="option" value="2">Matcha</option>
+                    <option class="option" value="3">Milk-tea</option>
+                    <option class="option" value="4">Juice</option>
+                    <option class="option" value="5">Tea</option>
+                </select>
+                <button class="btn" id="find">Find</button>
+            </div>
+        </div>
+        <div>
+            <button class="btn" id="add-product">Add a product</button>
+        </div>
+        <p id="mode-on" style="color: red; visibility: hidden;">**Edit mode is on**</p>
+        <div id="table" class="w-full">
+            <table c>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price (USD)</th>
+                        <th>Sold</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="prods">
+                    <tr class="prod">
+                        <td class="center">
+                            <img class="product-img" src="/media/capu_trans.png" alt="1">
+                            <p class="product-name">Cappuchino</p>
+                        </td>
+                        <td class="product-cate" >Coffee</td>
+                        <td class="product-price">5</td>
+                        <td  class="product-sold">872</td>
+                        <td>
+                            <div class="h-full center">
+                                <img class="edit" src="/media/icons8-edit-48.png" alt="">
+                                <img class='del' onclick="" src="/media/icons8-delete-24.png" alt="d1">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="prod">
+                        <td class="center">
+                            <img class='product-img' src="/media/latte_mat.webp" alt="2">
+                            <p class="product-name">Matcha latte</p>
+                        </td>
+                        <td class="product-cate">Matcha</td>
+                        <td class="product-price">7</td>
+                        <td class="product-sold">721</td>
+                        <td>
+                            <div class="h-full center">
+                                <img class="edit" src="/media/icons8-edit-48.png" alt="">
+                                <img class='del' onclick="" src="/media/icons8-delete-24.png" alt="d2">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="prod">
+                        <td class="center">
+                            <img class="product-img" src="/media/tscc.png" alt="3">
+                            <p class="product-name">Bobba milktea</p>
+                        </td>
+                        <td class="product-cate">Milk-tea</td>
+                        <td class="product-price">6</td>
+                        <td class="product-sold">1281</td>
+                        <td>
+                            <div class="h-full center">
+                                <img class="edit" src="/media/icons8-edit-48.png" alt="">
+                                <img class='del' onclick="" src="/media/icons8-delete-24.png" alt="d3">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="prod">
+                        <td class="center">
+                            <img class="product-img" src="/media/apple-juice.png" alt="3">
+                            <p class="product-name">Apple juice</p>
+                        </td>
+                        <td class="product-cate">Juice</td>
+                        <td class="product-price">7</td>
+                        <td class="product-sold">689</td>
+                        <td>
+                            <div class="h-full center">
+                                <img class="edit" src="/media/icons8-edit-48.png" alt="">
+                                <img class='del' onclick="" src="/media/icons8-delete-24.png" alt="d3">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="">
+        <div class="footer-list p-1 flex justify-around">
+            <div class="p-1">
+                <a href="/">
+                    <img src="/media/caverta-cafe.png" alt="">
+                    <p>-Coffee for lovers--</p>
+                </a>
+            </div>
+            <div class="p-1 footer-link">
+                <h1>Service</h1>
+                <ul class="w-full">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Staff</a></li>
+                </ul>
+            </div>
+            <div class="p-1">
+                <h1>Social media</h1>
+                <a target="_blank" href="https://www.facebook.com/"><img src="/media/fb.png" alt="" class="social"></a>
+                <a target="_blank" href="https://www.instagram.com/"><img src="/media/icons8-instagram-48.png" alt="" class="social"></a>
+                <a target="_blank" href="https://x.com/"><img src="/media/icons8-twitter-48.png" alt="" class="social"></a>
+                <a target="_blank" href="https://www.pinterest.com/"><img src="/media/icons8-pinterest-48.png" alt="" class="social"></a>
+            </div>
+        </div>
+        <div class="signature center p-1">
+            <p>Made by HYPN &#169;2024</p>
+        </div>
+    </footer>
+</body>
+</html>

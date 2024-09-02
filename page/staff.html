@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <script src="../js/staff.js"></script>
+    <title>Café Management</title>
+</head>
+<body>
+    <nav id="nav-top" class="border-b-gray center justify-between">
+        <div id="shortcut-burger" class="nav-wrap center flex-col">
+            <img src="/media//icons8-hamburger-menu-50.png" alt="">
+        </div>
+        <div class="nav-wrap h-full w-full end">
+            <p>Hello, Admin!</p>
+            <img id="user-icon" class="h-full" src="/media/icons8-user-30.png" alt="">
+            <ul class="drop-box none">
+                <a href="./login.html" class="w-full"><li class="center">Log out <img src="/media/icons8-logout-50.png" alt=""></li></a>
+            </ul>
+        </div>
+    </nav>
+    <aside id="nav" class="border-l-gray">
+        <div class="border-b-gray nav-height center">
+            <a href="/" class="center logo">
+                <img class="logo" src="/media/caverta-cafe.png" alt="">
+            </a>
+        </div>
+        <ul style="margin-top: 1rem;">
+            <li><a href="/" class="nav-link " ><img src="/media/icons8-dashboard-48.png" alt=""><p>Dashboard</p></a></li>
+            <li><a href="status.html" class="nav-link "><img src="/media/icons8-wallet-50.png" alt=""><p>Status</p></a></li>
+            <li><a href="product.html" class="nav-link "><img src="/media/icons8-drink-50.png" alt=""><p>Products</p></a></li>
+            <li><a href="staff.html" class="nav-link active"><img src="/media/icons8-group-48.png" alt=""><p>Staff</p></a></li>
+        </ul>
+        <a href="./login.html" class="logout-aside nav-link"><img src="/media/icons8-logout-50.png" alt=""><p>Log out</p></a>
+    </aside>
+    <aside id="shortcut-menu" class="border-l-gray none flex flex-col justify-between">
+        <ul style="margin-top: 1rem;">
+            <li><a href="/" class="nav-link " ><img src="/media/icons8-dashboard-48.png" alt=""><p>Dashboard</p></a></li>
+            <li><a href="status.html" class="nav-link "><img src="/media/icons8-wallet-50.png" alt=""><p>Status</p></a></li>
+            <li><a href="product.html" class="nav-link "><img src="/media/icons8-drink-50.png" alt=""><p>Products</p></a></li>
+            <li><a href="staff.html" class="nav-link active"><img src="/media/icons8-group-48.png" alt=""><p>Staff</p></a></li>
+        </ul>
+        <a href="./login.html" class="logout-aside nav-link"><img src="/media/icons8-logout-50.png" alt=""><p>Log out</p></a>
+    </aside>
+    <main>
+        <img id="ontop" src="/media/icons8-up-50.png" alt="a">
+        <div class="line flex"><h1 class="p-1">All staff:</h1></div>
+        <div class="run-placeholder my-05">
+            <h3 class="run p-1">Unlock <a href="https://www.patreon.com/wlop">CAVERTA ADMIN PRO SVIP</a> version for adding new or deleting staff in your organization</h3>
+        </div>
+        <div class="staff">
+            <div class="person center">
+                <div>
+                    <img class="staff-img" src="/media/IMG_0270.PNG" alt="">
+                </div>
+                <div class="p-1">
+                    <h1 class="staff-name">sophie_un_28</h1>
+                    <p>Position: <span class="important staff-position">Reception</span></p>
+                    <p>Description: <span class="staff-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente asperiores non, officiis, dicta velit, iusto sit placeat eos minus ipsum voluptate hic natus eaque rerum dolorum accusamus similique architecto incidunt.</span> </p>
+                    <button class="btn staff-btn" type="button">Detail</button>
+                </div>
+            </div>
+
+            <div class="person center">
+                <div>
+                    <img class="staff-img" src="/media/cho.JPG" alt="">
+                </div>
+                <div class="p-1">
+                    <h1 class="staff-name">_b.phuong0321</h1>
+                    <p>Position: <span class="important staff-position">Barista</span></p>
+                    <p>Description: <span class="staff-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident et velit enim delectus totam facilis doloremque corrupti consequuntur? Sapiente voluptas quo quos consequuntur unde consectetur ipsam tenetur illum iure quod.</span> </p>
+                    <button class="btn staff-btn" type="button">Detail</button>
+                </div>
+            </div>
+            <div class="person center">
+                <div>
+                    <img class="staff-img" src="/media/IMG_4785.PNG" alt="">
+                </div>
+                <div class="p-1">
+                    <h1 class="staff-name">ngtk.one</h1>
+                    <p>Position: <span class="important staff-position">Waitress</span></p>
+                    <p>Description: <span class="staff-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates harum id nihil quisquam earum dignissimos aut distinctio, explicabo, deleniti maiores libero, molestiae sint magnam fuga voluptatem suscipit! Sit, dolor reprehenderit!</span> </p>
+                    <button class="btn staff-btn" type="button">Detail</button>
+                </div>
+            </div>
+        </div>
+        <!-- cu no / -->
+        <div id="over-staff" class="over-staff center">
+        </div>
+    </main>
+
+    <footer class="">
+        <div class="footer-list p-1 flex justify-around">
+            <div class="p-1">
+                <a href="/">
+                    <img src="/media/caverta-cafe.png" alt="">
+                    <p>-Coffee for lovers--</p>
+                </a>
+            </div>
+            <div class="p-1 footer-link">
+                <h1>Service</h1>
+                <ul class="w-full">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Staff</a></li>
+                </ul>
+            </div>
+            <div class="p-1">
+                <h1>Social media</h1>
+                <a target="_blank" href="https://www.facebook.com/"><img src="/media/fb.png" alt="" class="social"></a>
+                <a target="_blank" href="https://www.instagram.com/"><img src="/media/icons8-instagram-48.png" alt="" class="social"></a>
+                <a target="_blank" href="https://x.com/"><img src="/media/icons8-twitter-48.png" alt="" class="social"></a>
+                <a target="_blank" href="https://www.pinterest.com/"><img src="/media/icons8-pinterest-48.png" alt="" class="social"></a>
+            </div>
+        </div>
+        <div class="signature center p-1">
+            <p>Made by HYPN &#169;2024</p>
+        </div>
+    </footer>
+</body>
+</html>
